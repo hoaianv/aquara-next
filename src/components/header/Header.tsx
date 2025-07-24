@@ -1,6 +1,5 @@
 "use client";
 
-import MainHeader from "@/components/header/MainHeader";
 import MenuHeader from "@/components/header/MenuHeader";
 import { usePathname } from "next/navigation";
 
@@ -36,7 +35,6 @@ type HeaderProps = {
 };
 export const Header = ({ data }: HeaderProps) => {
   const [hidden, setHidden] = useState(false);
-  const [isHovered, setIsHovered] = useState<ICategoryNode | null>(null);
   const { scrollY } = useScroll();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
@@ -59,18 +57,13 @@ export const Header = ({ data }: HeaderProps) => {
         transition={{ duration: 0.2, ease: "easeInOut" }}
       >
         <PromotionBar />
-        <MainHeader />
       </motion.header>
       <div
         className={` ${
           isHomePage ? "absolute" : "relative"
         } top-full left-0 w-full z-[100]`}
       >
-        <div
-          className={`h-[55px] w-full ${
-            !isHomePage || isHovered ? "bg-white" : ""
-          }`}
-        >
+        <div className={`h-[55px] w-full  bg-[#000000A6]`}>
           {search.status ? (
             <SearchHeader />
           ) : (
@@ -79,80 +72,74 @@ export const Header = ({ data }: HeaderProps) => {
                 <div className="xl:col-span-2 col-span-4">
                   <Link href={"/"}>
                     <Image
-                      src={
-                        isHomePage
-                          ? isHovered
-                            ? "/images/logo-black.png"
-                            : "/images/logo.png"
-                          : "/images/logo-black.png"
-                      }
-                      width={172}
-                      height={15}
+                      src={"/images/logo.svg"}
+                      width={80}
+                      height={48}
                       alt="logo"
                     />
                   </Link>
                 </div>
                 <div className=" col-span-2 xl:col-span-4 h-full">
                   <div className=" flex items-center  xl:justify-between justify-end h-full">
-                    {data.map((link) => (
-                      <div
-                        key={link.catId}
-                        onMouseEnter={() => setIsHovered(link)}
-                        onMouseLeave={() => setIsHovered(null)}
-                        className={`h-full  gap-1 items-center  ${
-                          !isHomePage || isHovered
-                            ? "text-[#444]"
-                            : "text-[#fff]"
-                        } ${"xl:flex hidden"} group h-full text-sm font-semibold cursor-pointer transition-colors duration-200`}
-                      >
-                        {link.name}
-
+                    <div
+                      className={` text-[#fff] ${"xl:block hidden"} group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                    >
+                      <span className=" flex items-center h-full gap-1">
+                        Sản phẩm
                         <AnimatePresence mode="wait">
                           <motion.div
-                            key={
-                              isHovered?.catId === link?.catId ? "up" : "down"
-                            }
+                            key={"up"}
                             initial={{ opacity: 0, y: -5 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 5 }}
                             transition={{ duration: 0.15 }}
-                          >
-                            {isHovered?.catId === link?.catId ? (
-                              <ChevronUp size={18} strokeWidth={1} />
-                            ) : (
-                              <ChevronDown size={18} strokeWidth={1} />
-                            )}
-                          </motion.div>
+                          ></motion.div>
                         </AnimatePresence>
-
-                        {Array.isArray(link?.children) &&
-                          link.children.length > 0 &&
-                          isHovered?.catId === link.catId && (
-                            <MenuHeader
-                              data={isHovered}
-                              setIsHovered={setIsHovered}
-                            />
-                          )}
+                      </span>
+                      <div className="hidden absolute top-full left-0 w-full min-h-[200px] bg-white  group-hover:block h-10     text-white p-2">
+                        <div className="mx-auto h-full 2xl:max-w-[920px]     xl:max-w-6xl lg:max-w-4xl md:max-w-lg sm:max-w-md max-w-sm text-white">
+                          <div className="flex items-center gap-4">
+                            {data?.length > 0 &&
+                              data.map((item) => (
+                                <Link
+                                  key={item.catId}
+                                  className="py-2 text-[#888888] hover:text-black transition-colors duration-200"
+                                  href={`/bo-suu-tap/${item.url}`}
+                                >
+                                  <div>
+                                    <Image
+                                      loading="lazy"
+                                      src={item.picture}
+                                      alt={item.name}
+                                      width={120}
+                                      height={120}
+                                    />
+                                    <div className="text-center">
+                                      <span className="text-base font-normal">
+                                        {item.name}
+                                      </span>
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                          </div>
+                        </div>
                       </div>
-                    ))}
+                    </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link
                         className=" flex items-center h-full"
-                        href={`/gioi-thieu-ve-ecoflow`}
+                        href={`/gioi-thieu-ve-aqara`}
                       >
-                        Về Ecoflow
+                        Về Aqara
                       </Link>
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={`  text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link
                         className=" flex items-center h-full"
@@ -163,22 +150,18 @@ export const Header = ({ data }: HeaderProps) => {
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link
                         className=" flex items-center h-full"
-                        href={"/bao-hanh"}
+                        href={"/tu-van-tu-dong-hoa"}
                       >
-                        Bảo hành
+                        Tư vấn tự đông hóa
                       </Link>
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link
                         className=" flex items-center h-full"
@@ -189,9 +172,7 @@ export const Header = ({ data }: HeaderProps) => {
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link
                         className=" flex items-center h-full"
@@ -202,9 +183,7 @@ export const Header = ({ data }: HeaderProps) => {
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <div
                         className="flex items-center h-full"
@@ -214,9 +193,7 @@ export const Header = ({ data }: HeaderProps) => {
                       </div>
                     </div>
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link href={"/tai-khoan"}>
                         <div className=" flex items-center h-full">
@@ -226,9 +203,7 @@ export const Header = ({ data }: HeaderProps) => {
                     </div>
 
                     <div
-                      className={` ${
-                        !isHomePage || isHovered ? "text-[#444]" : "text-[#fff]"
-                      }  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <Link href={"/gio-hang"}>
                         <div className=" flex items-center h-full">
@@ -237,9 +212,7 @@ export const Header = ({ data }: HeaderProps) => {
                       </Link>
                     </div>
                     <div
-                      className={` ${
-                        isHovered ? "text-[#444]" : "text-[#fff]"
-                      }   lg:hidden block   group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                      className={` text-[#fff]   lg:hidden block   group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
                     >
                       <div className="   flex   items-center h-full  ">
                         <AlignJustify />

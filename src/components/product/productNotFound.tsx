@@ -54,8 +54,8 @@ export default function ProductNotFound() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Sản phẩm bạn đang tìm kiếm không tồn tại, đã hết hàng hoặc có thể đã
-            được thay thế bởi phiên bản mới. Hãy khám phá các sản phẩm EcoFlow
-            khác để tìm giải pháp năng lượng phù hợp nhất cho bạn.
+            được thay thế bởi phiên bản mới. Hãy khám phá các sản phẩm Aqara
+            khác để tìm giải pháp nhà thông minh phù hợp nhất cho bạn.
           </p>
         </div>
 
@@ -103,9 +103,9 @@ export default function ProductNotFound() {
 
         <div className="text-sm text-gray-500">
           <p className="font-medium text-emerald-600 mb-1">
-            EcoFlow - Năng lượng sạch, Tương lai xanh
+            Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>
-          <p>Luôn có giải pháp năng lượng phù hợp cho bạn</p>
+          <p>Luôn có giải pháp nhà thông minh phù hợp cho bạn</p>
         </div>
       </div>
     </div>

@@ -112,12 +112,14 @@ const Documents = ({ data, meta }: DocumentsProps) => {
             <Empty />
           )}
         </div>
-        <Pagination
-          onPageChange={handlePageChange}
-          currentPage={meta.currentPage}
-          total={meta.total}
-          itemsPerPage={10}
-        />
+        {meta.total > 0 && (
+          <Pagination
+            onPageChange={handlePageChange}
+            currentPage={meta.currentPage}
+            total={meta.total}
+            itemsPerPage={10}
+          />
+        )}
       </div>
     </motion.div>
   );

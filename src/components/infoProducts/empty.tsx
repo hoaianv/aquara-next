@@ -27,8 +27,8 @@ export default function Empty() {
           <p className="text-gray-600 mb-6 leading-relaxed">
             Chúng tôi đang hoàn thiện tài liệu kỹ thuật cho sản phẩm này.
             <br />
-            Khám phá catalog để tìm hiểu thêm về giải pháp năng lượng sạch của
-            EcoFlow.
+            Khám phá catalog để tìm hiểu thêm về giải pháp nhà thông minh của
+            Aqara.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

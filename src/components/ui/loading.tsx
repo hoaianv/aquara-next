@@ -12,14 +12,14 @@ const Loading = () => {
               <path d="M13 3L4 14h7v7l9-11h-7V3z" />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-emerald-600">EcoFlow</h1>
+          <h1 className="text-2xl font-bold text-emerald-600">Aqara</h1>
         </div>
 
         <div className="relative w-20 h-20 mx-auto mb-6">
           <div className="absolute inset-0 border-4 border-gray-200 rounded-full"></div>
           <div className="absolute inset-0 border-4 border-emerald-500 rounded-full border-t-transparent animate-spin"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-sm font-semibold text-gray-700">Ecoflow</span>
+            <span className="text-sm font-semibold text-gray-700">Aqara</span>
           </div>
         </div>
 

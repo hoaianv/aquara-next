@@ -22,6 +22,8 @@ export interface ICategoryNode {
   catId: number;
   name: string;
   url: string;
+  picture: string;
+  banner: string;
   active: boolean;
   children?: ICategoryNode[];
   products?: INewProduct[];

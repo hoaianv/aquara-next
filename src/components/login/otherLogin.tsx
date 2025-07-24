@@ -13,7 +13,7 @@ const OtherLogin = () => {
           <Button
             onClick={() => router.push("/dang-ky")}
             propClassName="w-full"
-            text="Tạo tài khoản Ecoflow"
+            text="Tạo tài khoản Aqara"
             variant="transparent"
             type="submit"
           />
@@ -29,7 +29,7 @@ const OtherLogin = () => {
           <span className="text-xs text-[#707070]">
             Bằng cách đăng nhập bằng tài khoản bên thứ ba, bạn xác nhận rằng bạn
             đã đọc và đồng ý với Chính sách quyền riêng tư và Điều khoản sử dụng
-            của EcoFlow.
+            của Aqara.
           </span>
         </div>
       </div>

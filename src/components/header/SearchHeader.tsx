@@ -78,7 +78,7 @@ export const SearchHeader = () => {
           </div>
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
-              Tìm kiếm sản phẩm EcoFlow
+              Tìm kiếm sản phẩm Aqara
             </h3>
           </div>
           {loading ? (
@@ -128,15 +128,15 @@ export const SearchHeader = () => {
           <div className="bg-gradient-to-r from-emerald-50 to-blue-50 rounded-lg p-4 mb-3">
             <p className="text-gray-700 leading-relaxed">
               Bạn muốn tìm sản phẩm gì liên quan đến thương hiệu{" "}
-              <span className="font-semibold text-emerald-600">EcoFlow</span>?
+              <span className="font-semibold text-emerald-600">Aqara</span>?
             </p>
           </div>
         )}
 
         <div className="mt-3 pt-3 border-t border-gray-100">
           <p className="text-xs text-gray-500 text-center">
-            <span className="font-medium text-emerald-600">EcoFlow</span> - Năng
-            lượng sạch, Tương lai xanh
+            <span className="font-medium text-emerald-600">Aqara</span> - Ngôi
+            nhà thông minh, cuộc sống tiện nghi
           </p>
         </div>
       </div>

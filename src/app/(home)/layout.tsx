@@ -7,24 +7,24 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(domain),
-  title: "EcoFlow Việt Nam - Giải pháp năng lượng di động",
+  title: "Aqara Việt Nam - Giải pháp nhà thông minh toàn diện",
   description:
-    "EcoFlow Việt Nam cung cấp các trạm sạc điện, pin năng lượng mặt trời, thiết bị lưu trữ điện năng tiên tiến cho gia đình, du lịch và công nghiệp.",
+    "Aqara Việt Nam cung cấp các thiết bị nhà thông minh, cảm biến, khóa cửa, công tắc và giải pháp tự động hóa tiên tiến cho ngôi nhà của bạn.",
   alternates: {
     canonical: domain,
   },
-  authors: [{ name: "EcoFlow Việt Nam", url: domain }],
+  authors: [{ name: "Aqara Việt Nam", url: domain }],
   openGraph: {
-    title: "EcoFlow Việt Nam - Giải pháp năng lượng di động",
+    title: "Aqara Việt Nam - Giải pháp nhà thông minh toàn diện",
     description:
-      "Khám phá các sản phẩm trạm điện EcoFlow chính hãng tại Việt Nam. Hỗ trợ năng lượng cho mọi nhu cầu từ gia đình đến dã ngoại.",
+      "Khám phá các sản phẩm và giải pháp nhà thông minh Aqara chính hãng tại Việt Nam. Biến ngôi nhà bạn thành không gian sống tiện nghi và hiện đại.",
     url: domain,
     images: [
       {
-        url: "/images/ecoflow.png",
+        url: "/images/aqara.png", // Đã đổi tên ảnh thành aqara.png
         width: 1200,
         height: 630,
-        alt: "EcoFlow Việt Nam",
+        alt: "Aqara Việt Nam",
       },
     ],
   },

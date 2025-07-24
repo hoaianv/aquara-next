@@ -7,19 +7,21 @@ export default function NotFound() {
       <div className="text-center max-w-lg mx-auto">
         <div className="mb-8">
           <div className="relative w-32 h-20 mx-auto mb-6">
+            {/* Đây là phần icon, tôi sẽ thay đổi để nó trông giống một thiết bị nhà thông minh hơn, ví dụ như một ngôi nhà hoặc cảm biến */}
             <div className="w-28 h-16 border-4 border-emerald-500 rounded-lg bg-gradient-to-r from-emerald-100 to-blue-100 relative">
               <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-2 h-6 bg-emerald-500 rounded-r"></div>
               <div className="absolute inset-2 bg-gradient-to-r from-emerald-400 to-blue-400 rounded opacity-60"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <svg
-                  className="w-6 h-6 text-emerald-600"
+                  className="w-8 h-8 text-emerald-600"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                 </svg>
               </div>
             </div>
+            {/* Các chấm sáng có thể giữ nguyên để tạo hiệu ứng "thông minh" */}
             <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
             <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-300"></div>
           </div>
@@ -30,12 +32,12 @@ export default function NotFound() {
             404
           </h1>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Năng lượng không tìm thấy
+            Thiết bị không tìm thấy
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Trang bạn đang tìm kiếm đã hết năng lượng hoặc không tồn tại. Hãy
-            quay về trạm sạc chính để khám phá các giải pháp năng lượng sạch của
-            EcoFlow.
+            Trang bạn đang tìm kiếm không tồn tại hoặc đã bị ngắt kết nối. Hãy
+            quay về trung tâm điều khiển chính để khám phá các giải pháp nhà
+            thông minh của Aqara.
           </p>
         </div>
 
@@ -77,15 +79,15 @@ export default function NotFound() {
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               />
             </svg>
-            Sản phẩm EcoFlow
+            Sản phẩm Aqara
           </Link>
         </div>
 
         <div className="text-sm text-gray-500">
           <p className="font-medium text-emerald-600 mb-1">
-            EcoFlow - Năng lượng sạch, Tương lai xanh
+            Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>
-          <p>Khám phá giải pháp năng lượng di động thông minh</p>
+          <p>Khám phá giải pháp nhà thông minh toàn diện</p>
         </div>
       </div>
     </div>

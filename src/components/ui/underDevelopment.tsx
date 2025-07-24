@@ -11,12 +11,14 @@ export default function UnderDevelopment() {
               <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-2 h-6 bg-emerald-500 rounded-r"></div>
               <div className="absolute inset-2 bg-gradient-to-r from-emerald-400 to-blue-400 rounded opacity-60"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                {/* Icon đã được đổi từ năng lượng sang biểu tượng thông tin hoặc đang tải */}
                 <svg
-                  className="w-6 h-6 text-emerald-600"
+                  className="w-8 h-8 text-emerald-600"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9v-6h2v6zm2-8h-2V7h2v2z" />
+                  <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.01-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12.01 1zM12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />{" "}
+                  {/* Icon chữ "i" trong vòng tròn hoặc tương tự */}
                 </svg>
               </div>
             </div>
@@ -30,13 +32,13 @@ export default function UnderDevelopment() {
             Sắp Ra Mắt!
           </h1>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Tính Năng Mới Đang Được Sạc Đầy Năng Lượng!
+            Tính Năng Mới Đang Được Phát Triển!
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Chúng tôi đang hoàn thiện một tính năng đột phá, giúp bạn tối ưu hóa
-            trải nghiệm năng lượng sạch của mình. Quá trình sạc đang gần hoàn
-            tất, và bạn sẽ sớm được trải nghiệm sự nâng cấp vượt trội này. Hãy
-            kiên nhẫn một chút nhé!
+            trải nghiệm nhà thông minh của mình. Quá trình phát triển đang gần
+            hoàn tất, và bạn sẽ sớm được trải nghiệm sự nâng cấp vượt trội này.
+            Hãy kiên nhẫn một chút nhé!
           </p>
         </div>
 
@@ -78,13 +80,13 @@ export default function UnderDevelopment() {
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               />
             </svg>
-            Khám Phá Sản Phẩm EcoFlow
+            Khám Phá Sản Phẩm Aqara
           </Link>
         </div>
 
         <div className="text-sm text-gray-500">
           <p className="font-medium text-emerald-600 mb-1">
-            EcoFlow - Năng lượng sạch, Tương lai xanh
+            Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>
           <p>Luôn đổi mới để mang đến trải nghiệm tốt nhất cho bạn.</p>
         </div>

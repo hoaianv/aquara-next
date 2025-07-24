@@ -8,6 +8,7 @@ export interface IAdvertise {
   link: string;
   target: string;
   description: string;
+  type: string;
   order: number;
 }
 

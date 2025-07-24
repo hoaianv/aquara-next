@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Giới thiệu về Aqara Việt Nam",
+  title: "Tư vấn tự động hóa",
   description: "Chi tiết",
 };
 

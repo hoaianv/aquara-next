@@ -14,6 +14,7 @@ export default function NotFoundCollection() {
                 <div className="bg-gradient-to-r from-blue-400 to-emerald-400 rounded opacity-30"></div>
               </div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                {/* Thay đổi icon sang biểu tượng liên quan đến nhà thông minh hoặc bộ sưu tập trống */}
                 <svg
                   className="w-8 h-8 text-gray-400"
                   fill="none"
@@ -23,8 +24,8 @@ export default function NotFoundCollection() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M6 18L18 6M6 6l12 12"
+                    strokeWidth={2}
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" // Icon tủ đồ/kệ trống
                   />
                 </svg>
               </div>
@@ -45,8 +46,8 @@ export default function NotFoundCollection() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Danh mục sản phẩm bạn đang tìm kiếm không tồn tại hoặc đã được thay
-            đổi. Hãy khám phá các danh mục sản phẩm EcoFlow hiện có để tìm giải
-            pháp năng lượng phù hợp với nhu cầu của bạn.
+            đổi. Hãy khám phá các danh mục sản phẩm Aqara hiện có để tìm giải
+            pháp nhà thông minh phù hợp với nhu cầu của bạn.
           </p>
         </div>
 
@@ -94,9 +95,9 @@ export default function NotFoundCollection() {
 
         <div className="text-sm text-gray-500">
           <p className="font-medium text-emerald-600 mb-1">
-            EcoFlow - Năng lượng sạch, Tương lai xanh
+            Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>
-          <p>Khám phá giải pháp năng lượng di động thông minh</p>
+          <p>Khám phá giải pháp nhà thông minh toàn diện</p>
         </div>
       </div>
     </div>

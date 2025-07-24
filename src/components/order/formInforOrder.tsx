@@ -199,7 +199,7 @@ const OrderForm = ({ orderId }: OrderFormProps) => {
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="font-bold text-slate-800 text-lg">
-                      EcoFlow Delivery
+                      Aqara Delivery
                     </h3>
                   </div>
                   <p className="text-sm text-slate-600 mt-1">

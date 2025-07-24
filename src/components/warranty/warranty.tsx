@@ -24,8 +24,8 @@ export default function Warranty() {
   };
 
   return (
-    <div className=" py-[70px] bg-gradient-to-br from-emerald-50 via-white to-blue-50   px-4">
-      <div className="text-center   max-w-[1120px] mx-auto">
+    <div className=" py-[70px] bg-gradient-to-br from-emerald-50 via-white to-blue-50   px-4">
+      <div className="text-center  max-w-[1120px] mx-auto">
         <div className="mb-8">
           <div className="relative w-32 h-20 mx-auto mb-6">
             <div className="w-28 h-16 border-4 border-emerald-500 rounded-lg bg-gradient-to-r from-emerald-100 to-blue-100 relative">
@@ -37,7 +37,8 @@ export default function Warranty() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10.5C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10.5V11.5H13.5V10.5C13.5,8.7 12.8,8.2 12,8.2Z" />
+                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10.5C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10.5V11.5H13.5V10.5C13.5,8.7 12.8,8.2 12,8.2Z" />{" "}
+                  {/* Icon khiên bảo vệ/bảo hành */}
                 </svg>
               </div>
             </div>
@@ -51,7 +52,7 @@ export default function Warranty() {
             Tra cứu bảo hành
           </h1>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Nhập số serial của sản phẩm EcoFlow để kiểm tra thông tin bảo hành
+            Nhập số serial của sản phẩm Aqara để kiểm tra thông tin bảo hành
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export default function Warranty() {
               <input
                 onChange={(e) => setValue(e.target.value)}
                 type="text"
-                placeholder="Nhập số serial (ví dụ: ECO001234)"
+                placeholder="Nhập số serial (ví dụ: AQA001234)"
                 className="w-full px-4 py-3 border-2 border-emerald-200 rounded-lg focus:border-emerald-500 focus:outline-none text-gray-800 placeholder-gray-500"
               />
               <div className="absolute inset-y-0 right-3 flex items-center">
@@ -115,7 +116,7 @@ export default function Warranty() {
           </p>
         </div>
         {data && (
-          <div className="  mb-8 p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+          <div className="  mb-8 p-6 bg-white rounded-xl shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Thông tin bảo hành
             </h3>
@@ -155,7 +156,7 @@ export default function Warranty() {
 
         <div className="text-sm text-gray-500">
           <p className="font-medium text-emerald-600 mb-1">
-            EcoFlow - Năng lượng sạch, Tương lai xanh
+            Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>
           <p>Dịch vụ bảo hành chuyên nghiệp, hỗ trợ tận tâm</p>
         </div>

@@ -9,11 +9,16 @@ import {
   IResponseBlog,
   IResponseBlogs,
 } from "@/interfaces/models/IBlog.interface";
-import { IResponseCategoryMeta } from "@/interfaces/models/IProductsCategories.interface";
+import { IParams } from "@/interfaces/common";
 
-export async function getAll(page?: string) {
+export async function getAll(page?: string, payload?: IParams[]) {
+  const queryString =
+    payload?.map((item) => `${item.key}=${item.value}`).join("&") || "";
+
   const result = await api<IResponseBlogs>({
-    url: `${CONST_APIS.SERVER_URL}/${CONST_APIS.FEATURES.COMMON.BLOG}/${CONST_APIS_COMMON.GET_ALL}/${brand}?page=${page}`,
+    url: `${CONST_APIS.SERVER_URL}/${CONST_APIS.FEATURES.COMMON.BLOG}/${
+      CONST_APIS_COMMON.GET_ALL
+    }/${brand}?page=${page}${queryString ? `&${queryString}` : ""}`,
     options: {
       method: CONST_METHODS.GET,
       headers: {

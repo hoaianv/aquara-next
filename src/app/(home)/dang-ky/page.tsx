@@ -20,7 +20,7 @@ export default function Login() {
             <div className="max-w-[400px] w-full">
               <div className=" mt-[50px] mb-3">
                 <span className=" text-[24px] font-medium text-black">
-                  Tạo tài khoản Ecoflow
+                  Tạo tài khoản Aqara
                 </span>
               </div>
 

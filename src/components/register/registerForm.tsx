@@ -261,7 +261,7 @@ const RegisterForm = () => {
             onChange={field.onChange}
             checked={field.value}
             id="agreeToTerms"
-            label="Tôi đồng ý tuân thủ Chính sách bảo mật và Điều khoản sử dụng của EcoFlow."
+            label="Tôi đồng ý tuân thủ Chính sách bảo mật và Điều khoản sử dụng của Aqara."
             error={errors.agreeToTerms}
           />
         )}
@@ -274,7 +274,7 @@ const RegisterForm = () => {
             onChange={field.onChange}
             checked={field.value}
             id="subscribe"
-            label="Đăng ký nhận tin từ EcoFlow"
+            label="Đăng ký nhận tin từ Aqara"
             error={errors.subscribe}
           />
         )}

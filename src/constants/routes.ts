@@ -5,10 +5,10 @@ export const routes = {
   product: "/san-pham/:slug",
   cart: "/gio-hang",
 };
-export const brand = "ecoflow";
-export const siteName = "Ecoflow";
+export const brand = "aqara";
+export const siteName = "Aqara";
 
-export const url = "ecoflowvn.vn";
+export const url = "aqaravn.vn";
 export const urlImage = "https://api.ecoflowvn.vn/";
 
-export const domain = "https://ecoflowvn.vn/";
+export const domain = "https://aqaravn.vn/";
