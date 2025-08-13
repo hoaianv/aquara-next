@@ -23,6 +23,7 @@ export const CONST_APIS = {
       BLOG: "blog",
       CONTACT: "contact",
       PRODUCT_REVIEWS: "product-reviews",
+      PROPERTIES: "properties",
     },
   },
 };

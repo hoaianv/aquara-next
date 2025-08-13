@@ -27,7 +27,7 @@ const AlbumProduct = ({ images }: AlbumProductProps) => {
     };
 
   return (
-    <div className="p-3 sticky top-0 ">
+    <div className=" p-3">
       <Lightbox
         index={index}
         slides={images}

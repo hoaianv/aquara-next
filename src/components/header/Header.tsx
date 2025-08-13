@@ -96,17 +96,17 @@ export const Header = ({ data }: HeaderProps) => {
                           ></motion.div>
                         </AnimatePresence>
                       </span>
-                      <div className="hidden absolute top-full left-0 w-full min-h-[200px] bg-white  group-hover:block h-10     text-white p-2">
+                      <div className="hidden absolute top-full left-0 w-full min-h-[200px] bg-white  group-hover:block h-auto     text-white p-2">
                         <div className="mx-auto h-full 2xl:max-w-[920px]     xl:max-w-6xl lg:max-w-4xl md:max-w-lg sm:max-w-md max-w-sm text-white">
-                          <div className="flex items-center gap-4">
+                          <div className="grid grid-cols-4 gap-2">
                             {data?.length > 0 &&
                               data.map((item) => (
                                 <Link
                                   key={item.catId}
-                                  className="py-2 text-[#888888] hover:text-black transition-colors duration-200"
+                                  className="py-2  text-[#888888] hover:text-black transition-colors duration-200"
                                   href={`/bo-suu-tap/${item.url}`}
                                 >
-                                  <div>
+                                  <div className="flex items-center flex-col gap-1">
                                     <Image
                                       loading="lazy"
                                       src={item.picture}
@@ -115,7 +115,7 @@ export const Header = ({ data }: HeaderProps) => {
                                       height={120}
                                     />
                                     <div className="text-center">
-                                      <span className="text-base font-normal">
+                                      <span className="text-base font-medium line-clamp-1">
                                         {item.name}
                                       </span>
                                     </div>

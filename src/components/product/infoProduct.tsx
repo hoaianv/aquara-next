@@ -6,7 +6,6 @@ import { formatCurrency } from "@/until";
 import { Percent } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState, useTransition } from "react";
-import DOMPurify from "isomorphic-dompurify";
 import OptionProduct from "@/components/product/optionProduct";
 import { useAuthStore } from "@/stores/useAuth";
 import { useRouter } from "next/navigation";
@@ -26,8 +25,6 @@ const InfoProduct = ({ data, dataOption }: ProductProps) => {
   const { addItems } = useCartStore();
   const { user } = useAuthStore();
   const [option, setOption] = useState<IOption[]>(dataOption ?? []);
-
-  const [show, setShow] = useState<boolean>(false);
 
   const [select, setSelect] = useState<IAddCart>({
     brand: brand,
@@ -122,13 +119,13 @@ const InfoProduct = ({ data, dataOption }: ProductProps) => {
         </h1>
 
         <div className="flex gap-2 items-center">
-          <span className="text-[22px] text-[#232323] font-semibold">
+          <h2 className="text-[22px] text-[#232323] font-semibold">
             {formatCurrency(data.priceBase + totalOptionPrice)}
-          </span>
+          </h2>
           {data?.priceBase > 0 && (
-            <s className="text-[#919191] text-sm">
+            <h2 className="text-[#919191] text-sm line-through">
               {formatCurrency((data.priceBase + totalOptionPrice) * 1.25)}
-            </s>
+            </h2>
           )}
         </div>
         {!user && (
@@ -140,7 +137,7 @@ const InfoProduct = ({ data, dataOption }: ProductProps) => {
           </span>
         )}
 
-        <span className="text-[#82869e] text-xs mt-2">(Đã bao gồm VAT)</span>
+        <h2 className="text-[#82869e] text-xs mt-2">(Đã bao gồm VAT)</h2>
 
         <DescriptionShort data={data.shortDescription} />
 
