@@ -44,6 +44,7 @@ const Blogs = ({ data }: BlogsProps) => {
           currentPage={data.meta.currentPage}
           total={data.meta.total}
           itemsPerPage={10}
+          scrollToTop={true}
         />
       </motion.div>
     </div>

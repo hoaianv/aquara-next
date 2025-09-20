@@ -5,6 +5,8 @@ interface PaginationProps {
   total: number;
   itemsPerPage: number;
   onPageChange: (page: number) => void;
+  scrollToTop?: boolean; // Option to enable/disable scroll to top
+  scrollOffset?: number; // Custom scroll offset from top
 }
 
 const Pagination = ({
@@ -12,8 +14,22 @@ const Pagination = ({
   total,
   itemsPerPage,
   onPageChange,
+  scrollToTop = true,
+  scrollOffset = 0,
 }: PaginationProps) => {
   const totalPages = Math.ceil(total / itemsPerPage);
+
+  const handleScrollToTop = () => {
+    if (scrollToTop) {
+      // Sử dụng setTimeout để scroll sau khi DOM đã render xong
+      setTimeout(() => {
+        window.scrollTo({
+          top: scrollOffset,
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  };
 
   const handlePageClick = (pageNumber: number) => {
     if (
@@ -22,6 +38,7 @@ const Pagination = ({
       pageNumber !== currentPage
     ) {
       onPageChange(pageNumber);
+      handleScrollToTop();
     }
   };
 

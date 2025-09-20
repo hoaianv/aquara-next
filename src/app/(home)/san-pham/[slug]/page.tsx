@@ -5,6 +5,7 @@ import InfoProduct from "@/components/product/infoProduct";
 import ProductNotFound from "@/components/product/productNotFound";
 import Properties from "@/components/product/properties";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import Post from "@/components/ui/post";
 
 export default async function Product({
   params,
@@ -58,11 +59,7 @@ export default async function Product({
 
       {detailData?.product.description && (
         <div className="p-3 mt-5 bg-white rounded-md shadow-lg">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: detailData?.product?.description || "",
-            }}
-          />
+          <Post data={detailData?.product?.description} />
         </div>
       )}
     </div>
