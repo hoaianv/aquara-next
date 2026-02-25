@@ -41,6 +41,21 @@ export default async function RootLayout({
           })(window,document,'script','dataLayer','GTM-WLP6LX79');`}
         </Script>
         {/* End Google Tag Manager */}
+
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5NKCYYN8V3"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5NKCYYN8V3');
+    `}
+        </Script>
+        {/* End Google Analytics */}
       </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
