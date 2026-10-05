@@ -176,6 +176,17 @@ export const Header = ({ data }: HeaderProps) => {
                     >
                       <Link
                         className=" flex items-center h-full"
+                        href={"/bao-hanh"}
+                      >
+                        Bảo hành
+                      </Link>
+                    </div>
+
+                    <div
+                      className={` text-[#fff]  ${"xl:block hidden"}  group h-full text-sm font-semibold cursor-pointer transition-colors duration-200 `}
+                    >
+                      <Link
+                        className=" flex items-center h-full"
                         href={"/tin-tuc"}
                       >
                         Tin tức

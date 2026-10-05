@@ -155,6 +155,9 @@ export default function Warranty() {
         )}
 
         <div className="text-sm text-gray-500">
+          <p className="mb-3 text-gray-700">
+            Địa chỉ bảo hành: 245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh, Việt Nam.
+          </p>
           <p className="font-medium text-emerald-600 mb-1">
             Aqara - Ngôi nhà thông minh, cuộc sống tiện nghi
           </p>

@@ -71,19 +71,27 @@ const InfoProduct = ({ data, dataOption }: ProductProps) => {
 
     setSelect((prev) => ({
       ...prev,
-      option:
-        isChild || !newOptionData
-          ? prev.option.map((item, i) =>
-              i === index
-                ? { optionId, valueId, price: price || 0, name: name || "" }
-                : item
-            )
-          : newOptionData.map((item, idx) => ({
-              optionId: idx === index ? optionId : item.optionId,
-              valueId: idx === index ? valueId : item.values[0].id,
-              price: idx === index ? price || 0 : item.values[0].price || 0,
-              name: idx === index ? name || "" : item.values[0].value || "",
-            })),
+      option: (newOptionData ?? option).map((item) => {
+        if (item.optionId === optionId) {
+          return { optionId, valueId, price: price || 0, name: name || "" };
+        }
+
+        const previous = prev.option.find((prevItem) => prevItem.optionId === item.optionId);
+        const previousStillExists = previous
+          ? item.values.some((value) => value.id === previous.valueId)
+          : false;
+
+        if (previous && previousStillExists) {
+          return previous;
+        }
+
+        return {
+          optionId: item.optionId,
+          valueId: item.values[0].id,
+          price: item.values[0].price || 0,
+          name: item.values[0].value || "",
+        };
+      }),
     }));
   };
 

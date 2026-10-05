@@ -25,6 +25,8 @@ const OptionProduct = ({ option, onOption, select, onSelect }: OptionProps) => {
     price: number,
     name: string
   ) => {
+    onSelect(index, optionId, id, false, undefined, price, name);
+
     const response = await getOption(select.slug, id);
 
     if (response.error_code === 200 && response.status) {
@@ -42,7 +44,9 @@ const OptionProduct = ({ option, onOption, select, onSelect }: OptionProps) => {
           <div className="flex flex-col gap-3 mt-2">
             {item.values.map((opt) => {
               const isActive = select.option.some(
-                (i) => i.optionId === item.optionId && i.valueId === opt.id
+                (i) =>
+                  String(i.optionId) === String(item.optionId) &&
+                  String(i.valueId) === String(opt.id)
               );
 
               return (
@@ -69,7 +73,7 @@ const OptionProduct = ({ option, onOption, select, onSelect }: OptionProps) => {
                             opt.value
                           )
                   }
-                  className={`border-[1px] py-3 px-4 rounded-md ${
+                  className={`border-[1px] py-3 px-4 rounded-md cursor-pointer select-none transition-colors ${
                     isActive ? "border-[#2164ff]" : "border-[#c0c1c2]"
                   }`}
                 >
